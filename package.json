@@ -1,0 +1,22 @@
+{
+  "name": "cas",
+  "version": "1.0.0",
+  "description": "CAS Management System for Sparrow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sufiyan-Ansari/CAS.git"
+  },
+  "author": "Sufiyan Ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sufiyan-Ansari/CAS/issues"
+  },
+  "homepage": "https://github.com/Sufiyan-Ansari/CAS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
