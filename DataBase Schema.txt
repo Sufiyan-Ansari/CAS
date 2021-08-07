@@ -1,0 +1,22 @@
+uid --> type:CNIC and value:120000000000
+document-type -------> CNIC
+DocumentNumber --------- 12000000000
+documentValidityDate --------->  2030-07-25
+name ------- > Sufiyan
+surname ------> Ansari
+nickname ------> Sufiyan
+gender --------> Male
+birthdate -------> 1959-07-25
+
+
+
+username : sparrow
+password : tpstps
+
+Database name : CAS
+collection name : customer
+
+
+DB URL : mongodb+srv://sparrow:<password>@cas.kh8ye.mongodb.net/test
+
+

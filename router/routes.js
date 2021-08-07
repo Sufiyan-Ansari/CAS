@@ -1,13 +1,50 @@
 const express = require('express');
 const routes = express.Router();
+
+const mongo = require('mongodb');
+const mongoose = require('mongoose');
 const getContoller = require('../controller/getController');
+const Customer = require('../models/customers');
+const bodyParser = require('body-parser');
 
 
-routes.get('/',getContoller.GetContoller);
+routes.post('/insert',(req,res,next)=>{
+   
+    const customer = new Customer ({
+        _id : new mongoose.Types.ObjectId(),
+        uid : req.body.uid,
+        documentValidityDate : req.body.documentValidityDate,
+        name : req.body.name,
+        surname : req.body.surname,
+        nickname:req.body.nickname,
+        gender : req.body.gender,
+        birthdate:req.body.birthdate
 
-routes.get('/POST',(req,res,next)=>{
-    console.log(req);
-    res.send('This is post , comming from Router')
+
+
+
+
+    });
+    customer
+    .save()
+    .then(result=>{
+        console.log(result);
+        res.status(201).json({
+            message:"Handling Post Request",
+            createProduct:result
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json({
+            error : err
+        })
+    });
+    
+
+
+
+
 })
 
 module.exports = routes;

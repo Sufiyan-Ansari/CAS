@@ -1,0 +1,53 @@
+----------------One-Step Registration--------------
+
+{
+  "uid": {
+    "type": "CNIC",
+    "value": "1234567890125"
+  },
+  "documentType": "CNIC",
+  "documentNumber": "1234567890125",
+  "documentValidityDate": "2030-07-25",
+  "name": "Name",
+  "surname": "Surname",
+  "nickName": "Nickname",
+  "gender": "Male",
+  "birthDate": "1959-07-25",
+  "aliases": [
+    {
+      "type": "MOBILE",
+      "value": "+994515000000",
+      "startDate": "2017-10-11",
+      "expirationDate": "2022-03-31",
+      "status": "active",
+      "accounts": [
+        {
+          "id": {
+            "iban": "PK26AIIN1234567890000056"
+          },
+          "type": "DFLT",
+          "currency": "PKR",
+          "servicer": {
+            "memberId": "AAAAAAXX"
+          },
+          "openingDate": "2015-10-21",
+          "closingDate": "2022-12-23",
+          "isDefault": true
+        },
+        {
+          "id": {
+            "iban": " PK26AIIN1234567890000042"
+          },
+          "type": "DFLT",
+          "currency": "PKR",
+          "servicer": {
+            "memberId": "AAAAAAXX"
+          },
+          "openingDate": "2017-10-09",
+          "closingDate": "2030-07-15",
+          "isDefault": false
+        }
+      ]
+    }
+  ]
+}
