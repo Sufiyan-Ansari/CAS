@@ -7,12 +7,26 @@ const getContoller = require('../controller/getController');
 const Customer = require('../models/customers');
 const bodyParser = require('body-parser');
 
+// function getNextSequenceValue(sequenceName){
+//        var sequenceDocument = Customer.findOneAndUpdate({
+//        query:{_idd: sequenceName },
+//        update: {$inc:{sequence_value:1}},
+//        new:true
+//     });
+//     return sequenceDocument.sequence_value;
+//  }
+
+
 
 routes.post('/insert',(req,res,next)=>{
    
     const customer = new Customer ({
+        recordId : Math.floor((Math.random() * 100) + 7),
         _id : new mongoose.Types.ObjectId(),
-        uid : req.body.uid,
+        uid : {
+            type : req.body.uid.type,
+            value : req.body.uid.value
+        }, 
         documentValidityDate : req.body.documentValidityDate,
         name : req.body.name,
         surname : req.body.surname,

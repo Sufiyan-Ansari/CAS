@@ -9,11 +9,6 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-// app.get('/',(req,res,next)=>{
-//     console.log('Hello world!!');
-//     res.send('Hello World');
-// })
-
  dotenv.config();
  mongoose.connect(process.env.DB_CONNECT,{userMongoClient:true},()=> console.log('Mongoose Connected !'));
 

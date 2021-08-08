@@ -1,9 +1,21 @@
 const mongoose = require('mongoose');
 
+const UniqueID = mongoose.Schema({
+    type:String,
+    value:String
+})
 
 const customerSchema = mongoose.Schema({
     _id:mongoose.Schema.Types.ObjectId,
-    uid: String,
+    recordId :
+    {
+        type:Number,
+        required : true,
+        minimum : 0,
+        maximum: 1000000000,
+        unique:true
+    },
+    uid: [UniqueID],
     documentValidityDate:Date,
     name:String,
     surname:String,
@@ -11,5 +23,8 @@ const customerSchema = mongoose.Schema({
     gender:String,
     birthdate:Date
 })
+
+
+
 
 module.exports = mongoose.model('Customer',customerSchema);
